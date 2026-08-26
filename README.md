@@ -1,35 +1,59 @@
-**🧪 chem-it-lab**
-This repository documents my journey in computational chemistry, cheminformatics, and scientific programming.
+# 🧪 Chem-IT Lab
 
-**🎯 Goals**
-Combine chemistry with computer science
-Build real-world projects in computational chemistry
-Develop problem-solving and research skills
+A working notebook documenting my exploration of computational chemistry, cheminformatics, and scientific programming.
 
-**📅 Project Log**
-Day 1 — May 2, 2026
-Focus: Functional group bioisosteric transformations using RDKit 
+This repository records experiments, technical problems, observations, and lessons learned while building computational chemistry projects with Python and RDKit.
 
-**What I did:**
-* Implemented carb_acid_to_tetrazole to replace carboxylic acid groups with tetrazole rings (a known bioisosteric substitution in medicinal chemistry)
-* Implemented methyl_swapping to substitute methyl groups with chlorine atoms
-* Generated visual outputs (before/after) to validate structural transformations
-  
-**Challenges:**
-* Debugged RDKit behavior: ReplaceSubstructs() returns multiple possible products (tuple), which initially caused crashes
-* Needed to better understand how RDKit handles substructure matching vs full molecule representations
+## Current Focus
 
-**What I learned:**
-* Clear distinction between SMILES (molecule representation) and SMARTS (pattern matching)
-* Substructure search requires thinking in terms of patterns, not full molecules. Gave me the impression of the difference between the monomer and the repeating unit of the polymer made from it. I kinda associated with that.
-* Bioisosteric modifications are not purely structural — their real impact depends on electronic effects, pharmacokinetics, and biological context
+* Molecular structure manipulation
+* Cheminformatics with RDKit
+* Substructure matching
+* Bioisosteric transformations
+* Molecular property analysis
+* Scientific programming
 
-**Next step:**
-* Implement halogen_scan function
-* Study aromaticity and electronic effects
-* Explore integrating molecular property calculations to evaluate transformations
+## Experiment: Bioisosteric Transformations
 
-**🛠️ Tools & Topics**
-Python
-Chemistry concepts
-Algorithms / data structures
+### Objective
+
+Explore how molecular structures can be modified computationally using common bioisosteric transformations.
+
+### Implemented
+
+* `carb_acid_to_tetrazole` — replaces carboxylic acid groups with tetrazole rings
+* `methyl_swapping` — substitutes methyl groups with chlorine atoms
+* Molecular structure visualization before and after transformations
+
+### Technical Challenge
+
+RDKit's `ReplaceSubstructs()` can return multiple possible products rather than a single molecule. Understanding this behavior was necessary to prevent unexpected tuple-related errors and correctly handle the generated structures.
+
+### What I Learned
+
+* The difference between **SMILES**, which represents molecular structures, and **SMARTS**, which describes structural patterns used for matching.
+* Substructure matching requires thinking in terms of patterns rather than complete molecular representations.
+* Bioisosteric transformations cannot be evaluated purely from structural similarity; electronic effects, pharmacokinetics, and biological context also matter.
+
+One useful mental model I developed was the distinction between a complete molecular representation and a structural pattern, similar to the distinction between a polymer's monomer and its repeating unit.
+
+## Current / Planned Experiments
+
+* Halogen substitution scans
+* Aromaticity and electronic effects
+* Molecular property calculations
+* Quantitative comparison of molecular transformations
+
+## Tools
+
+* Python
+* RDKit
+* Computational chemistry
+* Cheminformatics
+* Algorithms and data structures
+
+## Why This Repository Exists
+
+Unlike my finished projects, this repository is intended to preserve the reasoning and experimentation behind my technical work.
+
+It serves as a record of questions I encountered, problems I solved, concepts I learned, and ideas I want to investigate further.
